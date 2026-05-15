@@ -1,0 +1,319 @@
+.figcaption {
+  margin-top: 48px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/*
+.hover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease; Adds a smooth fade
+}
+
+.hover-container:hover .hover-image {
+  opacity: 1;
+}*/
+
+
+:root{
+  --total-brand: 6;
+  --logo-width: 8 rem;
+  --total-logo-width: calc(var(--total-brand) * var(--logo-width)) ;
+}
+
+ .h2{
+
+  margin-bottom : 1rem;
+  text-align: center;
+}
+
+.slider{
+  width: 100vw;
+  height:8rem;
+  background-color: #fff;
+  box-shadow:
+  0 -.3rem .8rem #00000008,
+  0 .8rem 1.4rem -.2rem #0001;
+  display: flex;
+  align-items:center;
+  overflow:hidden;
+  position: relative;
+  margin-bottom : 3rem;
+  justify-content: center;
+
+}
+
+
+
+.slider::before, .slider::after{
+  /*top: 0;
+  z-index: 2;
+  pointer-events: none; */
+
+  position: absolute;
+  content: "";
+  height:100%;
+  width:var(--logo-width);
+
+}
+
+.slider::before{
+  left: 0;
+  background: linear-gradient(to right, #fff 0%, #fff0 100% );
+}
+.slider::after{
+  right: 0;
+  background: linear-gradient(to left, #fff 0%, #fff0 100% );
+}
+
+/*
+
+
+.slider::before,
+.slider::after{
+  content: "";
+  position: absolute;
+  top: 0;
+
+  height: 100%;
+  width: 8rem;
+
+  z-index: 5;
+  pointer-events: none;
+}
+
+.slider::before{
+  left: 0;
+
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0) 100%
+  );
+}
+
+.slider::after{
+  right: 0;
+
+  background: linear-gradient(
+    to left,
+    rgba(255,255,255,1) 0%,
+    rgba(255,255,255,0) 100%
+  );
+}
+*/
+.slider ul.brands{
+  list-style:none;
+  width: var(--total-logo-width);
+  display:flex;
+  animation: slideLeft 14s linear infinite;
+  align-items: center;
+/*  padding: 0;
+  margin: 0;
+  position: relative;
+  z-index: 1;*/
+}
+/*
+@keyframes slideLeft {
+  100% {
+    transform: translateX(-100%);
+  }
+}*/
+
+ul.brands li.brand-logo{
+  width: var(--logo-width);
+  font-size:  2rem;
+  text-align:center;
+  margin-left: 2rem;
+}
+
+
+li.brand-logo img{
+align-items: center;
+text-align: center;
+vertical-align: middle;}
+
+
+
+
+
+/*Certificates/ Education*/
+
+
+/* 4-column grid, left-aligned, dynamically wraps */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 260px);
+  gap: 20px;
+  justify-content: start; /* all rows start from same left position */
+}
+
+/* Perspective wrapper — needed for 3-D turnstile */
+.cert-item {
+  perspective: 900px;
+  width: 260px;
+  height: 220px;
+  cursor: pointer;
+}
+
+/* The flipping card */
+.cert-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  border-radius: 16px;
+}
+
+.cert-item.flipped .cert-card {
+  transform: rotateY(180deg);
+}
+
+/* Shared face styles */
+.cert-front,
+.cert-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* ── FRONT ── */
+.cert-front {
+  background: #ffffff;
+  border: 1px solid #e8e6e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px 20px;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.cert-item:hover .cert-front {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.11);
+  transform: translateY(-2px);
+}
+.cert-item.flipped:hover .cert-front {
+  transform: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.cert-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.cert-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  color: #1a1a1a;
+  text-align: center;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.cert-issuer {
+  font-size: 0.78rem;
+  color: #888;
+  font-weight: 400;
+}
+
+.cert-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.cert-year {
+  background: #eeecf5;
+  color: #5b4fcf;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.03em;
+}
+
+.cert-id {
+  font-size: 0.68rem;
+  color: #aaa;
+  font-family: 'DM Sans', monospace;
+}
+
+/* ── BACK ── */
+.cert-back {
+  background: #1a1a1a;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+}
+
+.cert-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* placeholder shown when no image src is set */
+.cert-back-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: #fff;
+  opacity: 0.5;
+  font-size: 0.8rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.cert-back-placeholder svg {
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+}
+
+.close-hint {
+  position: absolute;
+  bottom: 8px;
+  right: 10px;
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.35);
+  pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+  .cert-grid { grid-template-columns: repeat(3, 260px); }
+}
+@media (max-width: 840px) {
+  .cert-grid { grid-template-columns: repeat(2, 260px); }
+}
+@media (max-width: 560px) {
+  .cert-grid { grid-template-columns: 260px; }
+}
