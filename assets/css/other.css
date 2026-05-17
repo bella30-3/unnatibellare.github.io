@@ -156,8 +156,10 @@ vertical-align: middle;}
 .cert-grid {
   display: grid;
   grid-template-columns: repeat(4, 260px);
-  gap: 20px;
-  justify-content: start; /* all rows start from same left position */
+  gap: 2rem;
+/*  justify-content: space-between;;  all rows start from same left position */
+  margin: 2rem;
+  align-items: center;
 }
 
 /* Perspective wrapper — needed for 3-D turnstile */
@@ -173,9 +175,11 @@ vertical-align: middle;}
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
+ transform-style: preserve-3d;
   transition: transform 0.65s cubic-bezier(0.45, 0.05, 0.55, 0.95);
   border-radius: 16px;
+
+
 }
 
 .cert-item.flipped .cert-card {
@@ -317,3 +321,123 @@ vertical-align: middle;}
 @media (max-width: 560px) {
   .cert-grid { grid-template-columns: 260px; }
 }
+
+
+.extra-margintop{
+  margin-top: 2rem;
+}
+
+#projectGrid {
+  display: block;
+  width: 860px;
+  max-width: 100%;
+}
+
+.project-entry {
+  display: block;
+  width: 100%;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.project-header {
+  display: grid;
+  grid-template-columns: 48px 1fr 280px;
+  gap: 32px;
+  align-items: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project-number { font-size: 1.8rem; font-weight: 700; color: #c0392b; }
+.project-meta { min-width: 0; }
+.project-top-line { display: flex; gap: 16px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #888; margin-bottom: 6px; }
+.project-role { color: #c0392b; font-weight: 600; }
+.project-title { font-size: 2rem; font-weight: 700; margin-bottom: 12px; }
+.project-link-icon { font-size: 1.2rem; color: #888; text-decoration: none; margin-left: 8px; }
+.project-summary { color: #555; line-height: 1.6; margin-bottom: 20px; }
+.project-actions { display: flex; gap: 24px; align-items: center; }
+.toggle-btn { background: none; border: none; cursor: pointer; font-size: 0.9rem; font-weight: 600; border-bottom: 2px solid #000; padding-bottom: 2px; }
+.case-study-btn { font-size: 0.9rem; color: #555; text-decoration: none; }
+.case-study-btn:hover { color: #000; }
+
+.project-thumb {
+  width: 280px;
+  height: 180px;
+  background: #f0ebe3;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+[hidden] { display: none !important; }
+
+.project-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.project-details {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 32px 0;
+  margin-left: calc(48px + 32px); /* number col + gap */
+  width: calc(100% - 48px - 32px);
+}
+
+.project-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+.tag { border: 1px solid #ccc; padding: 6px 14px; font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.project-body { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.project-body h4 { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #888; margin-bottom: 12px; }
+.project-challenge p { line-height: 1.7; color: #444; }
+.project-results ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+.project-results li { line-height: 1.5; color: #444; }
+.project-divider { border: none; border-top: 1px solid #ddd; margin: 0; }
+
+
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+  background-color: var(--vl);
+  border: 2px solid #000;
+}
+
+
+.topnav-inner {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.topnav-inner a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  white-space: nowrap;
+}
+
+.topnav-inner a:hover {
+  color: #111;
+}
+
+/* push page content down so it doesn't hide under the nav
+body {
+  padding-top: 20px;
+}*/

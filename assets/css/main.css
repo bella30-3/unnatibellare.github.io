@@ -183,9 +183,9 @@ audio:not([controls]) {
   display: none;
 }
 
-[hidden], template {
+/*[hidden], template {
   display: none;
-}
+}*/
 
 a {
   background-color: #0000;
@@ -1998,7 +1998,7 @@ textarea.w-input, textarea.w-select {
 }
 
 .w-nav-menu {
-  float: right;
+  float: none;
   position: relative;
 }
 
@@ -4545,6 +4545,8 @@ blockquote {
   grid-column-gap: 24px;
   grid-row-gap: 48px;
   grid-template-rows: auto auto auto;
+  width: 100%;
+  align-self: flex-start;
 }
 
 .link-11, .link-12 {
@@ -6266,7 +6268,7 @@ blockquote {
 }
 
 .footer-top-2 {
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   display: flex;
 }
@@ -6556,6 +6558,12 @@ blockquote {
   float: none;
   justify-content: space-between !important;
   display: flex;
+  position: fixed;
+
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+
 }
 
 .brand {
@@ -6573,13 +6581,53 @@ blockquote {
   border: 1px solid #000;
   border-radius: 15px;
   width: 1000px;
-  margin-top: 20px;
+/*  margin-top: 20px;*/
+  margin-top: 0 !important;
+
   margin-left: auto;
   margin-right: auto;
   padding: 5px 42px;
-  position: fixed;
-  inset: 0% 0% auto;
+  position: fixed !important;
+  inset: unset !important;
+
+/*  inset: 0% 0% auto;*/
   box-shadow: 3px 3px 16px 1px #b4b4b4;
+}
+.navbar-3 {
+  border: 1px solid #000;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+  left: 5%;
+  right: 5%;
+}
+
+.navbar-3 {
+  width: 440px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navbar-3 {
+  border: 1px solid #000;
+  width: auto;
+  margin-left: 11px;
+  margin-right: 11px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/*added by claude*/
+
+.navbar-3.w-nav {
+  position: fixed !important;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5000;
+  background: transparent;
+  width: 1000px;
+  max-width: calc(100% - 32px);
 }
 
 .navbar-3.nav-colour {
@@ -13600,15 +13648,6 @@ blockquote {
     background-color: var(--vl);
   }
 
-  .navbar-3 {
-    border: 1px solid #000;
-    width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    display: inline;
-    left: 5%;
-    right: 5%;
-  }
 
   .image-41 {
     margin-top: 2px;
@@ -15308,11 +15347,6 @@ blockquote {
     max-width: none;
   }
 
-  .navbar-3 {
-    width: 440px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 
   .grid-21 {
     grid-template-rows: auto auto auto;
@@ -17809,7 +17843,7 @@ blockquote {
     flex-flow: column;
     flex: 0 auto;
     place-content: center;
-    align-items: center;
+    align-items: flex-start  ;
     margin-top: 0;
     display: flex;
     position: relative;
@@ -18159,9 +18193,7 @@ blockquote {
     padding-bottom: 0;
   }
 
-  .footer-top-2 {
-    justify-content: center;
-  }
+ 
 
   .footer-menu-wrapper {
     align-self: center;
@@ -18311,14 +18343,7 @@ end of changed by unnati */
     box-shadow: 0 4px 16px 1px #b4b4b4;
   }
 
-  .navbar-3 {
-    border: 1px solid #000;
-    width: auto;
-    margin-left: 11px;
-    margin-right: 11px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+
 
   .text-block-38 {
     color: var(--black);
