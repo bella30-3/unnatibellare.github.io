@@ -88,8 +88,8 @@ function createProjectCard(project, index) {
         </h2>
         <p class="project-summary">${project.summary}</p>
         <div class="project-actions">
-          <button class="toggle-btn" aria-expanded="false">Show details <span class="toggle-arrow">∧</span></button>
-          <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="case-study-btn">Open case study ↗</a>
+          <button class="toggle-btn" aria-expanded="false">Show details  <span class="toggle-arrow">∧</span></button>
+          <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="case-study-btn">View Project↗</a>
         </div>
       </div>
       <div class="project-thumb">
@@ -120,7 +120,7 @@ function createProjectCard(project, index) {
   // toggle
   const btn = item.querySelector('.toggle-btn');
   const details = item.querySelector('.project-details');
-  btn.addEventListener('click', () => {
+  /*btn.addEventListener('click', () => {
     const isHidden = details.hasAttribute('hidden');
     if (isHidden) {
       details.removeAttribute('hidden');
@@ -129,7 +129,7 @@ function createProjectCard(project, index) {
       details.setAttribute('hidden', '');
       btn.innerHTML = 'Show details <span class="toggle-arrow">∨</span>';
     }
-  });
+  });*/
 
   return item;
 }
@@ -202,7 +202,8 @@ const projects = [
   link: "https://bella30-3.github.io/venture-intel/",
   image: "assets/images/ai-venture-2.png",
   tags: ["Openclaw", "API", "AI"],
-  challenge: "Founders spend countless hours on cold outreach, while investors are flooded with pitches, yet very few introductions actually lead to meaningful....",
+  challenge: "Founders spend countless hours on cold outreach, while investors are flooded with pitches, yet very few introductions actually lead to meaningful...."
+  ,
   results: [
     "⚡ Reduced integration time by 95% (from 6-8 weeks to 3 days)",
     "💰 Generated $25M ARR within 18 months",
@@ -230,7 +231,7 @@ const projects = [
   role: "Claude Code",
   name: "Coming Soon",
   summary: "",
-  link: "https://bella30-3.github.io/venture-intel/",
+  link: "",
   image: "assets/img/claude-sg.png",
   tags: ["Claude", "API", "AI"],
   challenge: "Founders spend countless hours on cold outreach, while investors are flooded with pitches, yet very few introductions actually lead to meaningful....",
@@ -246,7 +247,7 @@ const projects = [
   role: "Instagram Hashtags",
   name: "Search Upgrade",
   summary: "",
-  link: "https://bella30-3.github.io/venture-intel/...",
+  link: "",
   image: "assets/img/ai-venture-intel.png",
   tags: ["Openclaw", "API", "AI"],
   challenge: "Founders spend countless hours on cold outreach, while investors are flooded with pitches, yet very few introductions actually lead to meaningful....",

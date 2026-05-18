@@ -2602,7 +2602,7 @@ blockquote {
   font-family: Circularstd book, sans-serif;
   font-size: 16px;
 }
-
+/*
 .hero-image {
   object-fit: cover;
   border-radius: 10px;
@@ -2612,7 +2612,7 @@ blockquote {
   margin-bottom: 22px;
   display: block;
 }
-
+*/
 .nav-menu-3 {
   display: flex;
 }
@@ -2621,7 +2621,7 @@ blockquote {
   max-width: 1233px;
   padding: 0 110px 50px 0;
 }
-
+/*
 .hero-image-new {
   text-align: center;
   margin-left: 0;
@@ -2631,7 +2631,7 @@ blockquote {
   position: static;
   overflow: visible;
 }
-
+*/
 .nav-link-now:hover {
   background-color: #fff3;
   border-radius: 5px;
@@ -18193,7 +18193,7 @@ blockquote {
     padding-bottom: 0;
   }
 
- 
+
 
   .footer-menu-wrapper {
     align-self: center;

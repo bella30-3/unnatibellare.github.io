@@ -1,5 +1,5 @@
 .figcaption {
-  margin-top: 48px;
+  margin-top: 2rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -26,6 +26,36 @@
   opacity: 1;
 }*/
 
+.hover-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-base,
+.img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.img-hover {
+  opacity: 0;
+}
+
+.hover-container:hover .img-base {
+  opacity: 0;
+}
+
+.hover-container:hover .img-hover {
+  opacity: 1;
+}
 
 :root{
   --total-brand: 6;
@@ -357,7 +387,7 @@ vertical-align: middle;}
 .project-link-icon { font-size: 1.2rem; color: #888; text-decoration: none; margin-left: 8px; }
 .project-summary { color: #555; line-height: 1.6; margin-bottom: 20px; }
 .project-actions { display: flex; gap: 24px; align-items: center; }
-.toggle-btn { background: none; border: none; cursor: pointer; font-size: 0.9rem; font-weight: 600; border-bottom: 2px solid #000; padding-bottom: 2px; }
+.toggle-btn { background: none; border: none; cursor: pointer; font-size: 0.9rem; font-weight: 600; border-bottom: 2px solid #000; padding-bottom: 2px; } */
 .case-study-btn { font-size: 0.9rem; color: #555; text-decoration: none; }
 .case-study-btn:hover { color: #000; }
 
